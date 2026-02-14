@@ -18,17 +18,6 @@ Complete suite of tools for analyzing, auditing, and securing FortiGate firewall
 - Level 1 & Level 2 profiles
 - Multiple report formats
 
-### 3. **YAML Fixer**
-`fix_fortigate_yaml.py` - YAML syntax repair
-- Fixes multi-value issues
-- Removes escaped quotes
-- Handles tab characters
-- Validates output
-
-### 4. **Diagnostic Tools**
-- `yaml_diagnostic.py` - YAML file analysis
-- `system_check.py` - Environment verification
-
 ## Quick Start
 
 ### Install Dependencies
@@ -43,13 +32,6 @@ python fortigate_config_analyzer.py your_config.conf html
 
 # CIS compliance scan
 python cis_fortigate_scanner.py your_config.conf html
-```
-
-### Fix YAML Issues
-```bash
-# If you have a .yaml file with errors
-python fix_fortigate_yaml.py your_config.yaml
-python fortigate_config_analyzer.py your_config_fixed.yaml html
 ```
 
 ## Tools Comparison
@@ -80,9 +62,6 @@ python fortigate_config_analyzer.py your_config_fixed.yaml html
 - **`README.md`** - This file
 - **`QUICKSTART.md`** - Fast start guide
 - **`CIS_SCANNER_GUIDE.md`** - CIS scanner manual
-- **`FORTIGATE_YAML_STRUCTURE.md`** - YAML format guide
-- **`TROUBLESHOOTING.md`** - Problem solving
-- **`YAML_TROUBLESHOOTING.md`** - YAML-specific issues
 - **`COMPLETE_FIX_GUIDE.md`** - Comprehensive fixes
 
 ### Samples
@@ -94,16 +73,10 @@ python fortigate_config_analyzer.py your_config_fixed.yaml html
 ### Workflow 1: New Configuration Audit
 
 ```bash
-# 1. Check if file is valid
-python yaml_diagnostic.py config.yaml
-
-# 2. Fix any issues
-python fix_fortigate_yaml.py config.yaml
-
-# 3. Run security analysis
+# 1. Run security analysis
 python fortigate_config_analyzer.py config_fixed.yaml html
 
-# 4. Run CIS compliance
+# 1. Run CIS compliance
 python cis_fortigate_scanner.py config_fixed.yaml html
 
 # 5. Review both reports
@@ -291,38 +264,6 @@ See `CIS_SCANNER_GUIDE.md` for complete list.
 **Frequency:** Automated daily scans
 **Output:** JSON to SIEM/monitoring system
 
-## Troubleshooting
-
-### Problem: Configuration Won't Load
-
-**Solution:**
-```bash
-# 1. Check format
-head -20 your_config.yaml
-
-# 2. Diagnose
-python yaml_diagnostic.py your_config.yaml
-
-# 3. Fix
-python fix_fortigate_yaml.py your_config.yaml
-
-# 4. Retry
-python fortigate_config_analyzer.py your_config_fixed.yaml
-```
-
-### Problem: YAML Syntax Errors
-
-**Error:** `expected <block end>, but found '<scalar>'`
-
-**Solution:**
-```bash
-python fix_fortigate_yaml.py config.yaml
-# Automatically fixes:
-# - Multiple quoted values
-# - Escaped quotes
-# - Tab characters
-```
-
 ### Problem: Low Scores
 
 **Focus on:**
@@ -334,16 +275,6 @@ python fix_fortigate_yaml.py config.yaml
 
 ### Problem: Tool Dependencies
 
-**Check:**
-```bash
-python system_check.py
-# Verifies:
-# - Python version
-# - PyYAML installed
-# - File permissions
-# - Tool availability
-```
-
 ## Documentation Index
 
 | Document | Purpose |
@@ -352,9 +283,6 @@ python system_check.py
 | **QUICKSTART.md** | 5-minute start guide |
 | **CIS_SCANNER_GUIDE.md** | Complete CIS scanner manual |
 | **FORTIGATE_YAML_STRUCTURE.md** | Understanding FortiGate YAML |
-| **TROUBLESHOOTING.md** | General problem solving |
-| **YAML_TROUBLESHOOTING.md** | YAML-specific issues |
-| **COMPLETE_FIX_GUIDE.md** | Step-by-step fixes |
 
 ## Best Practices
 
