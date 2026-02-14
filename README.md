@@ -288,23 +288,9 @@ See `CIS_SCANNER_GUIDE.md` for complete list.
 - **Monthly:** CIS compliance reports
 - **Quarterly:** Full audit with manual checks
 
-### Version Control
-```bash
-# Track your configs
-git add configs/fortigate_$(date +%Y%m%d).conf
-git commit -m "Config snapshot $(date +%Y-%m-%d)"
-
-# Track reports
-git add reports/scan_$(date +%Y%m%d).html
-git commit -m "Security scan $(date +%Y-%m-%d)"
-```
-
-### Automated Monitoring
-```bash
-# crontab -e
-0 2 * * * /scripts/daily_scan.sh
-0 9 1 * * /scripts/monthly_cis_scan.sh
-```
+### Future Plan (Pipeline for improvement
+- Version Control Automation
+- Automated Monitoring using cronjob
 
 ### Documentation
 - Keep scan history
