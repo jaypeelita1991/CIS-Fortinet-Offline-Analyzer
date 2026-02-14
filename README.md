@@ -53,10 +53,6 @@ python cis_fortigate_scanner.py your_config.conf html
 - **`fortigate_config_analyzer.py`** - Main security analyzer (1,000+ lines)
 - **`cis_fortigate_scanner.py`** - CIS benchmark scanner (1,600+ lines)
 
-### Utilities
-- **`fix_fortigate_yaml.py`** - YAML syntax fixer
-- **`yaml_diagnostic.py`** - YAML file diagnostics
-- **`system_check.py`** - Environment checker
 
 ### Documentation
 - **`README.md`** - This file
