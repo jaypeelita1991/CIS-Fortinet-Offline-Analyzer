@@ -328,21 +328,6 @@ git commit -m "Security scan $(date +%Y-%m-%d)"
 3. Try with sample_config.txt
 4. Read error messages carefully
 
-### Quick Reference
-```bash
-# Test with sample
-python fortigate_config_analyzer.py sample_config.txt html
-
-# Check system
-python system_check.py
-
-# Diagnose YAML
-python yaml_diagnostic.py your_file.yaml
-
-# Fix YAML
-python fix_fortigate_yaml.py your_file.yaml
-```
-
 ## Sample Reports
 
 Both tools generate professional HTML reports with:
