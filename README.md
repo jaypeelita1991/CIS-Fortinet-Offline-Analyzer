@@ -89,7 +89,7 @@ python fortigate_config_analyzer.py your_config_fixed.yaml html
 - **`sample_config.txt`** - CLI format example
 - **`sample_config.yaml`** - YAML format example
 
-## 🎓 Usage Workflows
+## Usage Workflows
 
 ### Workflow 1: New Configuration Audit
 
@@ -164,7 +164,7 @@ fi
 echo "✅ PASS: Configuration meets requirements"
 ```
 
-## 🔍 What Each Tool Checks
+##  What Each Tool Checks
 
 ### Security Analyzer Checks
 
@@ -231,7 +231,7 @@ echo "✅ PASS: Configuration meets requirements"
 
 See `CIS_SCANNER_GUIDE.md` for complete list.
 
-## 📈 Understanding Scores
+## Understanding Scores
 
 ### Security Analyzer Score
 
@@ -291,7 +291,7 @@ See `CIS_SCANNER_GUIDE.md` for complete list.
 **Frequency:** Automated daily scans
 **Output:** JSON to SIEM/monitoring system
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Problem: Configuration Won't Load
 
